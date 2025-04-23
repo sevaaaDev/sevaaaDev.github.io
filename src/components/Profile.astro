@@ -8,7 +8,7 @@ import ProfileImage from "../assets/profile-img.jpg";
   </div>
   <div class="profile-content">
     <h1>sevaaaDev</h1>
-    <p>I make computer program, and i also write blog</p>
+    <p>I make computer program, <span>and i also write blog</span></p>
   </div>
 </div>
 <div>
@@ -35,6 +35,12 @@ import ProfileImage from "../assets/profile-img.jpg";
     display: flex;
     gap: 2rem;
     align-items: center;
+    flex-wrap: wrap;
+  }
+  .profile-content {
+    /* TODO: learn flex   */
+    flex: 1 0 0;
+    min-width: 200px;
   }
   .profile-content h2 {
     margin: 0;
@@ -44,5 +50,8 @@ import ProfileImage from "../assets/profile-img.jpg";
     border-radius: 50%;
     width: 100px;
     height: 100px;
+  }
+  .profile-content span {
+    white-space: nowrap;
   }
 </style>
