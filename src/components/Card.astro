@@ -1,0 +1,38 @@
+---
+interface BaseProps {
+  title: string;
+  link?: string;
+}
+
+interface WithSubtitle extends BaseProps {
+  desc: string;
+  date?: never;
+}
+
+interface WithDate extends BaseProps {
+  date: string | Date;
+  desc?: never;
+}
+
+type Props = WithSubtitle | WithDate;
+const { title, desc, link, date } = Astro.props;
+---
+
+<style>
+  p {
+    margin: 0;
+  }
+  p.date {
+    font-style: italic;
+  }
+  h3 {
+    margin: 0.2rem 0;
+  }
+  .card {
+    margin: 1rem 0;
+  }
+</style>
+<div class="card">
+  <h3><a href={link || `/posts/${title}`}>{title}</a></h3>
+  <p class={date && "date"}>{desc || date}</p>
+</div>
