@@ -3,15 +3,18 @@ import Layout from "../layouts/Layout.astro";
 import Profile from "../components/Profile.astro";
 import SmallBlogList from "../components/SmallBlogList.astro";
 import About from "../components/About.astro";
+import ProjectList from "../components/ProjectList.astro";
 import "../assets/default.css";
 ---
 
+<!-- TODO: project section -->
 <Layout>
   <header>
     <Profile />
   </header>
   <main>
     <About />
+    <ProjectList />
     <SmallBlogList />
   </main>
   <footer>Made with Astro</footer>
