@@ -10,7 +10,11 @@ const posts = await getCollection("blog");
 <h2>Blog</h2>
 {
   posts.map((post) => (
-    <Card title={post.data.title} url={post.id} date={post.data.date} />
+    <Card
+      title={post.data.title}
+      url={`/posts/${post.id}`}
+      date={post.data.date}
+    />
   ))
 }
 <Card title="lorem ipsum dlor amet" date="18 Jun 25" />
