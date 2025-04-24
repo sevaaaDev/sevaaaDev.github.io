@@ -1,7 +1,7 @@
 ---
 interface BaseProps {
   title: string;
-  link?: string;
+  url?: string;
 }
 
 interface WithSubtitle extends BaseProps {
@@ -15,7 +15,7 @@ interface WithDate extends BaseProps {
 }
 
 type Props = WithSubtitle | WithDate;
-const { title, desc, link, date } = Astro.props;
+const { title, desc, url, date } = Astro.props;
 ---
 
 <style>
@@ -33,6 +33,6 @@ const { title, desc, link, date } = Astro.props;
   }
 </style>
 <div class="card">
-  <h3><a href={link || `/posts/${title}`}>{title}</a></h3>
+  <h3><a href={url}>{title}</a></h3>
   <p class={date && "date"}>{desc || date}</p>
 </div>
