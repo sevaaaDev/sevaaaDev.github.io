@@ -1,7 +1,16 @@
 ---
 import Card from "./Card.astro";
+import { getCollection } from "astro:content";
+// const posts = Object.values(
+//   import.meta.glob("../pages/posts/*.md", { eager: true }),
+// );
+const posts = await getCollection("blog");
 ---
 
 <h2>Blog</h2>
-<Card title="type of smart pointer in C++" date="23 Jun 25" />
-<Card title="why i love neovim" date="18 Jun 25" />
+{
+  posts.map((post) => (
+    <Card title={post.data.title} url={post.id} date={post.data.date} />
+  ))
+}
+<Card title="lorem ipsum dlor amet" date="18 Jun 25" />
