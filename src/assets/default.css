@@ -39,3 +39,8 @@
   font-family: "Nunito";
   line-height: 1.2;
 }
+
+a {
+  color: #005577;
+  text-decoration-thickness: 2px;
+}
