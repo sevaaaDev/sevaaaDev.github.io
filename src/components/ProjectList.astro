@@ -1,8 +1,14 @@
 ---
-import Card from "../components/Card.astro";
+import ProjectCard from "./ProjectCard.astro";
 ---
 
 <h2>Projects</h2>
-<Card title="Space Invader" desc="Space Invader inspired game" />
-<Card title="Word Grid" desc="Find hidden words inside of grid" />
-<!-- TODO: component for card -->
+<ProjectCard title="Space Invader" repo="space-invader">
+  <p>Space invader inspired game</p>
+</ProjectCard>
+<ProjectCard title="Word Grid" repo="wordgrid">
+  <p>Find hidden words inside a grid</p>
+</ProjectCard>
+<ProjectCard title="Snake Game" repo="SnakeGame">
+  <p>Classic snake game</p>
+</ProjectCard>

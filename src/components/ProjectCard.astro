@@ -1,0 +1,32 @@
+---
+interface Props {
+  title: string;
+  url?: string;
+  repo?: string;
+}
+const { title, url, repo } = Astro.props;
+---
+
+<div class="project-card">
+  <h3>
+    {
+      url || repo ? (
+        <a href={url || `https://github.com/sevaaadev/${repo}`} target="_blank">
+          {title}
+        </a>
+      ) : (
+        { title }
+      )
+    }
+  </h3>
+  <slot />
+</div>
+<style>
+  .project-card :global(p),
+  .project-card :global(h3) {
+    margin: 0;
+  }
+  .project-card {
+    margin: 1rem 0;
+  }
+</style>
