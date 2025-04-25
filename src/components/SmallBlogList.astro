@@ -13,7 +13,7 @@ const posts = await getCollection("blog");
     <Card
       title={post.data.title}
       url={`/posts/${post.id}`}
-      date={post.data.date}
+      date={post.data.publishDate}
     />
   ))
 }

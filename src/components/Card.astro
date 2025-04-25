@@ -16,6 +16,18 @@ interface WithDate extends BaseProps {
 
 type Props = WithSubtitle | WithDate;
 const { title, desc, url, date } = Astro.props;
+const dateOptions: object = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+let formattedPublishDate;
+if (date) {
+  formattedPublishDate = new Date(date).toLocaleDateString(
+    "en-US",
+    dateOptions,
+  );
+}
 ---
 
 <style>
@@ -34,5 +46,5 @@ const { title, desc, url, date } = Astro.props;
 </style>
 <div class="card">
   <h3><a href={url}>{title}</a></h3>
-  <p class={date && "date"}>{desc || date}</p>
+  <p class={date && "date"}>{desc || formattedPublishDate}</p>
 </div>
