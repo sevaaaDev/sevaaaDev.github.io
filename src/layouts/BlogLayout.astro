@@ -29,7 +29,11 @@ const formattedModifiedDate = new Date(
       <a href="/">Home</a>
       <header class="header">
         <h1>{frontmatter.title}</h1>
-        <time datetime={frontmatter.publishDate}>{formattedPublishDate}</time>
+        <p>
+          Posted on <time datetime={frontmatter.publishDate}
+            >{formattedPublishDate}</time
+          >
+        </p>
       </header>
       <slot />
     </div>
@@ -48,8 +52,9 @@ const formattedModifiedDate = new Date(
     margin-inline: auto;
     min-height: 100dvh;
   }
-  .header h1 {
-    margin-bottom: 0;
+  .header h1,
+  p {
+    margin: 0;
   }
   .header {
     margin: 2rem 0;
