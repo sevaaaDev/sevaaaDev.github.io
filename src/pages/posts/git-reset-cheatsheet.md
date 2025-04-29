@@ -27,7 +27,7 @@ make the branch point to that commit, and reset the staging area
 ```sh
 git reset --hard [commit]
 ```
-make the branch point to that commit, and reset everything (staging area and ***working directory***)
+make the branch point to that commit, and reset everything, including ***working directory***
 - commit = reset
 - staging = reset
 - workingdir = reset
