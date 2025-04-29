@@ -1,10 +1,11 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import Card from "./Card.astro";
 import { getCollection } from "astro:content";
-// const posts = Object.values(
-//   import.meta.glob("../pages/posts/*.md", { eager: true }),
-// );
-const posts = await getCollection("blog");
+let posts = await getCollection("blog");
+posts.sort((a, b): number => {
+  return Date.parse(b.data.publishDate) - Date.parse(a.data.publishDate);
+});
 ---
 
 <h2>Blog</h2>
