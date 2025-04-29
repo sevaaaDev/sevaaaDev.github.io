@@ -77,6 +77,11 @@ a {
   color: #005577;
   text-decoration-thickness: 2px;
 }
+
 strong {
   color: #000;
+}
+pre {
+  padding: 1rem;
+  border-radius: 0.3rem;
 }
