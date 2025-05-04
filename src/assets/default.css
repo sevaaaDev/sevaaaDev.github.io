@@ -68,17 +68,25 @@
   line-height: 1.3;
 }
 
+body {
+  background-color: #1d2021;
+  color: white;
+}
 p {
   font-weight: 500;
   font-size: 1.1rem;
-  color: #222;
+}
+p,
+li {
+  color: #d4be98;
 }
 a {
-  color: #005577;
+  color: #7daea3;
+  text-decoration-thickness: 1.3px;
 }
 
 strong {
-  color: #000;
+  color: white;
 }
 pre {
   padding: 1rem;
