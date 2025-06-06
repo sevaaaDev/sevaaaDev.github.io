@@ -10,13 +10,20 @@ import ProjectList from "../components/ProjectList.astro";
   <header>
     <Profile />
   </header>
-  <main>
-    <About />
-    <ProjectList />
-    <SmallBlogList />
-  </main>
-  <footer>Made with Astro</footer>
-  <!-- Main -->
-  <!-- Blog -->
-  <!-- Footer -->
+  <div>
+    <main>
+      <About />
+      <ProjectList />
+      <SmallBlogList />
+    </main>
+    <footer>Made with Astro</footer>
+  </div>
 </Layout>
+<style>
+  header {
+    flex: 1 1 0;
+  }
+  div {
+    flex: 1 1 400px;
+  }
+</style>
