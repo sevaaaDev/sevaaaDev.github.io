@@ -79,6 +79,7 @@ p {
 p,
 li {
   color: #d4be98;
+  font-size: 1.2rem;
 }
 a {
   color: #7daea3;
@@ -95,4 +96,13 @@ pre {
 img {
   width: 100%;
   margin: 1rem 0;
+}
+
+kbd {
+  font-family: "monospace";
+  background-color: #ccc;
+  color: #000;
+  font-size: 0.8rem;
+  padding: 2px;
+  border-radius: 2px;
 }
