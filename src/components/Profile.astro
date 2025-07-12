@@ -7,18 +7,22 @@ import ProfileImage from "../assets/chicken.png";
     <img src={ProfileImage.src} alt="blank-image" />
   </div>
   <div class="profile-content">
-    <h1>sevaaaDev</h1>
+    <div class="name">
+      <h1>Sevan</h1>
+      <p>@sevaaaDev</p>
+    </div>
     <p>
       <span>I make computer program,</span>
-      <span>and I occasionally write blog</span>
+      <span>and I occasionally write blog.</span>
+      pleasure to meet you
     </p>
   </div>
 </div>
+
 <style>
   .profile h1,
   p {
     margin: 0;
-    text-align: center;
   }
   .profile {
     display: flex;
@@ -26,7 +30,6 @@ import ProfileImage from "../assets/chicken.png";
     flex-wrap: wrap;
   }
   .profile-content {
-    /* TODO: learn flex   */
     flex: 1 0 0;
     min-width: 200px;
   }
@@ -42,7 +45,6 @@ import ProfileImage from "../assets/chicken.png";
     width: 100px;
     height: 100px;
     display: block;
-    margin-inline: auto;
   }
   .profile-content span {
     white-space: nowrap;

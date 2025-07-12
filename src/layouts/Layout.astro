@@ -1,5 +1,6 @@
 ---
 import "../assets/default.css";
+import Profile from "../components/Profile.astro";
 ---
 
 <!doctype html>
@@ -12,7 +13,20 @@ import "../assets/default.css";
   </head>
   <body>
     <div class="container">
-      <slot />
+      <header class="header">
+	<Profile />
+      </header>
+      <div class="second-col">
+	<nav>
+	  <ul>
+	    <li><a href="/">Posts</a></li>
+	    <li><a href="/about">About</a></li>
+	  </ul>
+	</nav>
+	<main>
+  	  <slot />	  
+	</main>
+      </div>
     </div>
   </body>
 </html>
@@ -28,7 +42,13 @@ import "../assets/default.css";
     margin-inline: auto;
     min-height: 100dvh;
     display: flex;
-    flex-wrap: wrap;
-    gap: 0 2rem;
+    border: 1px solid yellow;
+  }
+  .second-col {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+  .header {
+    max-width: 30%;
   }
 </style>
