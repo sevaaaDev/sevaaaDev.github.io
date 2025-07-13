@@ -1,6 +1,7 @@
 ---
 import "../assets/default.css";
 import Profile from "../components/Profile.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <!doctype html>
@@ -18,10 +19,7 @@ import Profile from "../components/Profile.astro";
       </header>
       <div class="second-col">
 	<nav>
-	  <ul>
-	    <li><a href="/">Posts</a></li>
-	    <li><a href="/about">About</a></li>
-	  </ul>
+	  <Navbar active="Posts" />
 	</nav>
 	<main>
   	  <slot />	  
@@ -40,15 +38,17 @@ import Profile from "../components/Profile.astro";
     padding: 1rem;
     max-width: 1000px;
     margin-inline: auto;
-    min-height: 100dvh;
+/*    min-height: 100dvh; */
     display: flex;
-    border: 1px solid yellow;
+/*    border: 1px solid yellow; */
+    gap: 2rem;
+    flex-wrap: wrap;
   }
   .second-col {
-    flex-basis: 0;
+    flex-basis: 50%;
     flex-grow: 1;
   }
   .header {
-    max-width: 30%;
+    max-width: min-content;
   }
 </style>
