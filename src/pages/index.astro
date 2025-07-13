@@ -1,29 +1,98 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Profile from "../components/Profile.astro";
-import SmallBlogList from "../components/SmallBlogList.astro";
-import About from "../components/About.astro";
-import ProjectList from "../components/ProjectList.astro";
+// import Profile from "../components/Profile.astro";
+// import SmallBlogList from "../components/SmallBlogList.astro";
+// import About from "../components/About.astro";
+// import ProjectList from "../components/ProjectList.astro";
 ---
 
 <Layout>
-  <header>
-    <Profile />
-  </header>
-  <div>
-    <main>
-      <About />
-      <ProjectList />
-      <SmallBlogList />
-    </main>
-    <footer>Made with Astro</footer>
-  </div>
+  <article>
+    <div class="text-date">
+      <p class="name-topic"> seva <span class="topic">on @emacs</span> </p>  
+      <time datetime="2025-07-12">July 12, 2025</time>
+    </div>
+    <h2><a href="/">Why emacs is not comparable to vim</a></h2>
+    <p>this is my first post</p>
+  </article>
+  <article>
+    <div class="text-date">
+      <p class="name-topic"> seva <span class="topic">on @emacs</span> </p>  
+      <time datetime="2025-07-12">July 12, 2025</time>
+    </div>
+    <h2><a href="/">Why emacs is not comparable to vim</a></h2>
+    <p>this is my first post</p>
+  </article>
+  <article>
+    <div class="text-date">
+      <p class="name-topic"> seva <span class="topic">on @emacs</span> </p>  
+      <time datetime="2025-07-12">July 12, 2025</time>
+    </div>
+    <p><a href="/">Been using emacs for the past few weeks, i think its a fine editor. Its default editing keybinds are bad, but the extensibility of it is just awesome</a></p>
+  </article>
 </Layout>
+
 <style>
-  header {
-    flex: 1 1 0;
+  article {
+    border-bottom: 1px solid white;
+    padding: 1rem 0;
   }
-  div {
-    flex: 1 1 400px;
+  p, h2 {
+    margin: 0;
+  }
+  time {
+    font-style: italic;
+    color: #d4be98;
+  }
+  .text-date {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+  }
+  .name-topic {
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  .topic {
+    color: #D3869B;
+  }
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+  h2 a {
+    color: #fff;
+    text-decoration: none;
+  }
+  h2 a:hover {
+    text-decoration: underline;
+  }
+  p a {
+    color:#d4be98;
+    text-decoration: none;
+  }
+  p a:hover {
+    text-decoration: underline;
   }
 </style>
+
+<!--      <header> -->
+<!--      <Profile /> -->
+<!--      </header> -->
+<!--      <div> -->
+<!--      <main> -->
+<!--      <About /> -->
+<!--      <ProjectList /> -->
+<!--      <SmallBlogList /> -->
+<!--      </main> -->
+<!--      <footer>Made with Astro</footer> -->
+<!--      </div> -->
+<!--      </Layout> -->
+<!--      <style> -->
+<!--      header { -->
+<!--      flex: 1 1 0; -->
+<!--      } -->
+<!--      div { -->
+<!--      flex: 1 1 400px; -->
+<!--      } -->
+<!--      </style> -->
