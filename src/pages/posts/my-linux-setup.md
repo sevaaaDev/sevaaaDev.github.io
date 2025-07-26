@@ -2,6 +2,7 @@
 layout: "../../layouts/BlogLayout.astro"
 title: "My Linux setup"
 publishDate: "05/18/25"
+topic: "computer"
 ---
 
 I've been using Linux for about a year now. My journey started in Ubuntu 24.04, though I had experimented with other distros before that, Ubuntu was the one i used seriously for months — until I distro-hopped again, this time to [Arch Linux](https://archlinux.org)

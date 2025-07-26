@@ -2,6 +2,7 @@
 layout: "../../layouts/BlogLayout.astro"
 title: "git reset cheatsheet"
 publishDate: "04/29/25"
+topic: "programming"
 ---
 staging is changes that you have added with `git add`
 

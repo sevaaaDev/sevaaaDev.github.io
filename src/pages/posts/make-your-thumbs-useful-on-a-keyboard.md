@@ -2,6 +2,7 @@
 layout: "../../layouts/BlogLayout.astro"
 title: "Make your thumbs useful on a keyboard"
 publishDate: "07/01/25"
+topic: "computer"
 ---
 
 Notice that big <kbd>space</kbd> bar on your keyboard? you know that your thumbs dont get used for anything other than pressing space character. Now, you can make your thumbs useful by remapping the <kbd>space</kbd> bar.

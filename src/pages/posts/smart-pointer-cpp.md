@@ -3,6 +3,7 @@ layout: '../../layouts/BlogLayout.astro'
 title: 'different types of smart pointer in C++'
 publishDate: '04/25/25'
 modifiedDate: '04/28/25'
+topic: 'programming'
 ---
 ## unique ptr
 unique ptr works by calling free to raw ptr it holds on its destructor

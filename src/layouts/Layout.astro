@@ -19,7 +19,7 @@ import Navbar from "../components/Navbar.astro";
       </header>
       <div class="second-col">
 	<nav>
-	  <Navbar active="Posts" />
+	  <slot name="nav"/>
 	</nav>
 	<main>
   	  <slot />	  
@@ -35,7 +35,7 @@ import Navbar from "../components/Navbar.astro";
     box-sizing: border-box;
   }
   .container {
-    padding: 1rem;
+    padding: 1rem 2rem;
     max-width: 1000px;
     margin-inline: auto;
 /*    min-height: 100dvh; */
