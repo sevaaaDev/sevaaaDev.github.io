@@ -1,0 +1,28 @@
+---
+const { active } = Astro.props;
+---
+
+<ul>
+  <li class={active == "Posts" ? "active" : ""}><a href="/">Posts</a></li>
+  <li class={active == "About" ? "active" : ""}><a href="/about">About</a></li>
+</ul>
+
+<style>
+    ul {
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      gap: 1rem;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    a:hover {
+      border-bottom: 1px solid white;
+    }
+    .active a {
+      font-weight: bold;
+      border-bottom: 1px solid white;
+    }
+  </style>
