@@ -10,11 +10,11 @@ posts.sort((a, b): number => {
 {
   posts.map((post) => (
     <Card
-      title={post.data.title}
+      title={post.data.title ? post.data.title : ""}
       url={`/posts/${post.id}`}
       date={post.data.publishDate}
       topic={post.data.topic}
-      body={post.data.desc ? post.data.desc : post.body!.slice(0, 100) + "..."}
+      body={post.data.desc ? post.data.desc : post.body!}
     />
   ))
 }
