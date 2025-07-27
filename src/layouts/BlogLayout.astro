@@ -1,5 +1,7 @@
 ---
 import "../assets/default.css";
+import Profile from "../components/Profile.astro";
+import Navbar from "../components/Navbar.astro";
 const { frontmatter } = Astro.props;
 const dateOptions: object = {
   year: "numeric",
@@ -26,16 +28,19 @@ const formattedModifiedDate = new Date(
   </head>
   <body>
     <div class="container">
-      <a href="/">&lt- Back</a>
       <header class="header">
-        <h1>{frontmatter.title}</h1>
-        <p>
-          Posted on <time datetime={frontmatter.publishDate}
-            >{formattedPublishDate}</time
-          >
-        </p>
+        <Profile />
       </header>
-      <slot />
+      <div class="second-col">
+        <nav>
+          <Navbar />
+        </nav>
+        <main>
+          <h1>{frontmatter.title}</h1>
+          <time datetime={formattedPublishDate}>{formattedPublishDate}</time>
+          <slot />
+        </main>
+      </div>
     </div>
   </body>
 </html>
@@ -46,23 +51,23 @@ const formattedModifiedDate = new Date(
     box-sizing: border-box;
   }
   .container {
-    padding: 1rem;
-    max-width: 800px;
+    padding: 1rem 1.5rem;
+    max-width: 1000px;
     margin-inline: auto;
-    min-height: 100dvh;
+    /*    min-height: 100dvh; */
+    display: flex;
+    /*    border: 1px solid yellow; */
+    gap: 2rem;
+    flex-wrap: wrap;
   }
-  .header h1,
-  p {
-    margin: 0;
+  .second-col {
+    flex-basis: 50%;
+    flex-grow: 1;
   }
   .header {
-    margin: 2rem 0;
+    max-width: min-content;
   }
-  a {
-    text-decoration: none;
-    font-weight: 700;
-  }
-  a:hover {
-    text-decoration: underline;
+  h1 {
+    margin-bottom: 0;
   }
 </style>

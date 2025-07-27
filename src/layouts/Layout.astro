@@ -1,7 +1,6 @@
 ---
 import "../assets/default.css";
 import Profile from "../components/Profile.astro";
-import Navbar from "../components/Navbar.astro";
 ---
 
 <!doctype html>
@@ -15,15 +14,15 @@ import Navbar from "../components/Navbar.astro";
   <body>
     <div class="container">
       <header class="header">
-	<Profile />
+        <Profile />
       </header>
       <div class="second-col">
-	<nav>
-	  <slot name="nav"/>
-	</nav>
-	<main>
-  	  <slot />	  
-	</main>
+        <nav>
+          <slot name="nav" />
+        </nav>
+        <main>
+          <slot />
+        </main>
       </div>
     </div>
   </body>
@@ -35,12 +34,12 @@ import Navbar from "../components/Navbar.astro";
     box-sizing: border-box;
   }
   .container {
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     max-width: 1000px;
     margin-inline: auto;
-/*    min-height: 100dvh; */
+    /*    min-height: 100dvh; */
     display: flex;
-/*    border: 1px solid yellow; */
+    /*    border: 1px solid yellow; */
     gap: 2rem;
     flex-wrap: wrap;
   }
