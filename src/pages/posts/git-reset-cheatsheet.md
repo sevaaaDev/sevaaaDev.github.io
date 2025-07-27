@@ -3,7 +3,10 @@ layout: "../../layouts/BlogLayout.astro"
 title: "git reset cheatsheet"
 publishDate: "04/29/25"
 topic: "programming"
+desc: "cheatsheet for git reset command, hope its useful for you."
 ---
+
+## info
 staging is changes that you have added with `git add`
 
 workingdir is changes that you have not added with `git add`
