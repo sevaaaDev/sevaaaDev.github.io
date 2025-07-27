@@ -8,21 +8,25 @@ const { active } = Astro.props;
 </ul>
 
 <style>
-    ul {
-      padding: 0;
-      list-style-type: none;
-      display: flex;
-      gap: 1rem;
-    }
-    a {
-      text-decoration: none;
-      color: white;
-    }
-    a:hover {
-      border-bottom: 1px solid white;
-    }
-    .active a {
-      font-weight: bold;
-      border-bottom: 1px solid white;
-    }
-  </style>
+  ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid white;
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    opacity: 0.5;
+  }
+  a:hover {
+    opacity: 1;
+  }
+  .active a {
+    font-weight: bold;
+    opacity: 1;
+  }
+</style>
