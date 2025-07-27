@@ -9,17 +9,9 @@ import Navbar from "../components/Navbar.astro";
 import SmallBlogList from "../components/SmallBlogList.astro";
 ---
 
-
 <Layout>
-  <Navbar slot="nav" active="Posts"/>
-  <article>
-    <div class="text-date">
-      <p class="name-topic"> seva <span class="topic">on @emacs</span> </p>  
-      <time datetime="2025-07-27">July 27, 2025</time>
-    </div>
-    <p><a href="/">I dont know why i always get problem when coding in emacs, how does Doom emacs or other premade config doesnt seems to get this too? </a></p>
-  </article><SmallBlogList/>
-  
+  <Navbar slot="nav" active="Posts" />
+  <SmallBlogList />
 </Layout>
 
 <style>
@@ -27,7 +19,8 @@ import SmallBlogList from "../components/SmallBlogList.astro";
     border-bottom: 1px solid white;
     padding: 1rem 0;
   }
-  p, h2 {
+  p,
+  h2 {
     margin: 0;
   }
   time {
@@ -45,7 +38,7 @@ import SmallBlogList from "../components/SmallBlogList.astro";
     margin-bottom: 0.5rem;
   }
   .topic {
-    color: #D3869B;
+    color: #d3869b;
   }
   h2 {
     margin-bottom: 0.5rem;
@@ -58,7 +51,7 @@ import SmallBlogList from "../components/SmallBlogList.astro";
     text-decoration: underline;
   }
   p a {
-    color:#d4be98;
+    color: #d4be98;
     text-decoration: none;
   }
   p a:hover {
