@@ -2,7 +2,7 @@
 interface BaseProps {
   title: string;
   url?: string;
-  body:string;
+  body: string;
 }
 
 interface WithSubtitle extends BaseProps {
@@ -32,26 +32,26 @@ if (date) {
   );
 }
 ---
-<!-- <div class="card"> -->
-<!--   <h3><a href={url}>{title}</a></h3> -->
-<!--   <p class={date && "date"}>{desc || formattedPublishDate}</p> -->
-<!-- </div> -->
+
 <article>
-    <div class="text-date">
-      <p class="name-topic">seva <span class="topic">on @{topic}</span> </p>  
-      <time datetime={formattedPublishDate}>{formattedPublishDate}</time>
-    </div>
-    {title ? <h2><a href={url}>{title}</a></h2> : ""}
+  <div class="text-date">
+    <p class="name-topic">seva <span class="topic">on @{topic}</span></p>
+    <time datetime={formattedPublishDate}>{formattedPublishDate}</time>
+  </div>
+  <a href={url}>
+    {title ? <h2>{title}</h2> : ""}
     <p>{body}</p>
+  </a>
 </article>
 
 <style>
-article {
+  article {
     border-bottom: 1px solid white;
     font-size: 1.2rem;
     padding: 1rem 0;
   }
-  p, h2 {
+  p,
+  h2 {
     margin: 0;
   }
   time {
@@ -69,23 +69,16 @@ article {
     color: #fff;
   }
   .topic {
-    color: #D3869B;
+    color: #d3869b;
   }
   h2 {
     margin-bottom: 0.5rem;
   }
-  h2 a {
+  a {
     color: #fff;
     text-decoration: none;
   }
-  h2 a:hover {
-    text-decoration: underline;
-  }
-  p a {
-    color:#d4be98;
-    text-decoration: none;
-  }
-  p a:hover {
+  a:hover {
     text-decoration: underline;
   }
 </style>
