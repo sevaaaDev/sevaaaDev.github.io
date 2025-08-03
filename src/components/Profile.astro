@@ -1,10 +1,11 @@
 ---
 import ProfileImage from "../assets/profile.png";
+import { Image } from "astro:assets";
 ---
 
 <div class="profile">
 	<div class="profile-img">
-		<img src={ProfileImage.src} alt="blank-image" />
+		<Image src={ProfileImage} alt="profile" />
 	</div>
 	<div class="profile-content">
 		<div class="name">
@@ -20,7 +21,8 @@ import ProfileImage from "../assets/profile.png";
 		<ul>
 			<li>
 				<a href="https://github.com/sevaaadev"
-					>github.com/sevaaadev</a>
+					>github.com/sevaaadev</a
+				>
 			</li>
 		</ul>
 	</div>

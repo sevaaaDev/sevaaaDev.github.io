@@ -1,5 +1,6 @@
 ---
 import ProfileImage from "../assets/profile.png";
+import { Image } from "astro:assets";
 interface BaseProps {
 	title: string;
 	url?: string;
@@ -35,7 +36,8 @@ if (date) {
 ---
 
 <article>
-	<img src={ProfileImage.src} alt="profile" />
+	<Image src={ProfileImage} alt="profile" />
+	<!-- <img src={ProfileImage.src} alt="profile" /> -->
 	<div class="content">
 		<div class="text-date">
 			<p class="name-topic">
