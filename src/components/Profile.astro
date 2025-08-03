@@ -9,7 +9,7 @@ import { Image } from "astro:assets";
 	</div>
 	<div class="profile-content">
 		<div class="name">
-			<h1>Sevan</h1>
+			<h1>Sevan <span class="pronounce">he/him</span></h1>
 			<p>@sevaaaDev</p>
 		</div>
 		<p>
@@ -29,6 +29,12 @@ import { Image } from "astro:assets";
 </div>
 
 <style>
+	span.pronounce {
+		font-weight: 400;
+		font-size: 1.2rem;
+		opacity: 0.4;
+		font-style: italic;
+	}
 	.name p {
 		margin: 0;
 	}
