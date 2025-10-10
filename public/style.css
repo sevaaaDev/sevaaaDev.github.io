@@ -39,6 +39,9 @@ main {
   flex-grow: 1;
 }
 
+time {
+  cursor: help;
+}
 .profile a {
   white-space: nowrap;
 }
