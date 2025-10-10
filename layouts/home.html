@@ -1,0 +1,15 @@
+{{ define "main" }}
+<nav class="nav">
+  <ul>
+    <li>
+      <a href="{{.Site.BaseURL}}" class="current">*Latest transmission</a>
+    </li>
+    <li><a href='{{urls.JoinPath .Site.BaseURL "/about"}}'>About me</a></li>
+  </ul>
+</nav>
+<ul class="list">
+  {{range .Site.RegularPages }} {{if not (eq .Layout "about") }}
+  <li>{{time.Format "20060102T150405" .Date}} {{.Content}}</li>
+  {{end}} {{end}}
+</ul>
+{{end}}

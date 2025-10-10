@@ -1,0 +1,12 @@
+{{ define "main" }}
+<nav class="nav">
+  <ul>
+    <li><a href="{{.Site.BaseURL}}">Latest transmission</a></li>
+    <li>
+      <a href='{{urls.JoinPath .Site.BaseURL "/about"}}' class="current"
+        >*About me</a
+      >
+    </li>
+  </ul>
+</nav>
+{{ .Content }} {{end}}
