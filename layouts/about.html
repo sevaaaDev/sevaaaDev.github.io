@@ -1,0 +1,4 @@
+{{ define "main" }} {{$ctx := dict "page" . "Current" "about"}} {{partial
+"nav.html" $ctx}}
+<p class="prompt">&gt FONT="Rubik" cat --fmt=md -- /about/about.txt</p>
+{{ .Content }} {{end}}

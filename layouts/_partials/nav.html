@@ -1,0 +1,25 @@
+<nav class="nav">
+  <ul>
+    <li>
+      <a
+        href="{{.page.Site.BaseURL}}"
+        class='{{if eq .Current "log"}}{{print "current"}}{{end}}'
+        >/log</a
+      >
+    </li>
+    <li>
+      <a
+        href='{{urls.JoinPath .page.Site.BaseURL "/blog"}}'
+        class='{{if eq .Current "blog"}}{{print "current"}}{{end}}'
+        >/blog</a
+      >
+    </li>
+    <li>
+      <a
+        href='{{urls.JoinPath .page.Site.BaseURL "/about"}}'
+        class='{{if eq .Current "about"}}{{print "current"}}{{end}}'
+        >/about</a
+      >
+    </li>
+  </ul>
+</nav>

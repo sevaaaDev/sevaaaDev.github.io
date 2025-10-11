@@ -1,0 +1,142 @@
+/* fira-code-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Fira Code";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/fira-code-v27-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/rubik-v31-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* rubik-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/rubik-v31-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+body {
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  background-color: #222;
+  color: #eee;
+}
+
+.container {
+  max-width: 1000px;
+  margin-inline: auto;
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 2rem;
+}
+
+header {
+  min-width: 300px;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+main {
+  min-width: 300px;
+  flex-basis: 0;
+  flex-grow: 2;
+}
+a {
+  color: oklch(71.5% 0.143 215.221);
+}
+img {
+  border-radius: 8px;
+}
+
+time {
+  cursor: help;
+}
+
+.profile {
+  & ul {
+    list-style-type: "\2726\ ";
+    padding-inline: 1rem;
+  }
+  & img {
+    display: block;
+    translate: 0 40%;
+  }
+  & .banner {
+    aspect-ratio: 3 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-color: oklch(60% 0.118 184.704);
+    border-radius: 8px;
+    padding-block-start: 2rem;
+  }
+  & .link-icons {
+    display: flex;
+    padding-block: 1rem;
+    & a:first-child {
+      margin-inline-start: auto;
+    }
+  }
+}
+.profile a {
+  white-space: nowrap;
+}
+
+.name,
+.username {
+  margin-block: 0;
+}
+
+.name .pron {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.nav ul {
+  font-family: "Fira Code";
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin-block: 0;
+  gap: 0.5rem;
+  & li:first-child {
+    margin-inline-start: auto;
+  }
+  & li {
+    padding-block: 0.5rem;
+  }
+  & li a {
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+    &.current {
+      color: black;
+      background-color: oklch(92.8% 0.006 264.531);
+    }
+  }
+}
+
+.prompt {
+  font-family: "Fira Code";
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  font-family: "Fira Code";
+  & p {
+    margin-block-start: 0;
+  }
+}
