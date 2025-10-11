@@ -4,7 +4,7 @@
 <ul class="list">
   {{range .Site.RegularPages }} {{if (strings.Contains .Path "/log/") }}
   <li>
-    <time datetime="{{.Date}}" title='{{time.Format "Tue, 02 Jan 2006" .Date}}'>
+    <time datetime="{{.Date}}" title='{{time.Format "Mon, 02 Jan 2006" .Date}}'>
       {{time.Format "20060102T150405" .Date}}
     </time>
     {{.Content}}
