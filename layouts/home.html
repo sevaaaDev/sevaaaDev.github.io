@@ -1,14 +1,9 @@
-{{ define "main" }}
-<nav class="nav">
-  <ul>
-    <li>
-      <a href="{{.Site.BaseURL}}" class="current">*Latest transmission</a>
-    </li>
-    <li><a href='{{urls.JoinPath .Site.BaseURL "/about"}}'>About me</a></li>
-  </ul>
-</nav>
+{{ define "main" }} {{$ctx := dict "page" . "Current" "log"}} {{partial
+"nav.html" $ctx}}
+<p class="prompt">&gt ls /log | xargs cat</p>
 <ul class="list">
-  {{range .Site.RegularPages }} {{if not (eq .Layout "about") }}
+  {{range .Site.RegularPages }} {{if and (not (eq .Layout "about")) (not
+  (strings.Contains .Path "blog/")) }}
   <li>
     <time datetime="{{.Date}}" title='{{time.Format "Tue, 02 Jan 2006" .Date}}'>
       {{time.Format "20060102T150405" .Date}}

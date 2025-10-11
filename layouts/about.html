@@ -1,12 +1,4 @@
-{{ define "main" }}
-<nav class="nav">
-  <ul>
-    <li><a href="{{.Site.BaseURL}}">Latest transmission</a></li>
-    <li>
-      <a href='{{urls.JoinPath .Site.BaseURL "/about"}}' class="current"
-        >*About me</a
-      >
-    </li>
-  </ul>
-</nav>
+{{ define "main" }} {{$ctx := dict "page" . "Current" "about"}} {{partial
+"nav.html" $ctx}}
+<p class="prompt">&gt FONT="Rubik" cat --fmt=md -- /about/about.txt</p>
 {{ .Content }} {{end}}
