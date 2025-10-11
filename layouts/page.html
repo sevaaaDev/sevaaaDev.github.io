@@ -1,3 +1,10 @@
 {{define "main"}}
+<nav class="nav">
+  <ul>
+    <li>
+      <a href='{{urls.JoinPath .Site.BaseURL "/blog"}}' class="current">&lt</a>
+    </li>
+  </ul>
+</nav>
 <h1>{{ .Title }}</h1>
 {{ .Content }} {{end}}
