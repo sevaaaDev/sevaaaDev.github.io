@@ -6,8 +6,15 @@
     <description>Recent content in Logs on /sevan/log</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Oct 2025 14:12:53 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 09 Oct 2025 14:17:47 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/log/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Post2</title>
+      <link>http://localhost:1313/log/post2/</link>
+      <pubDate>Thu, 09 Oct 2025 14:17:47 +0700</pubDate>
+      <guid>http://localhost:1313/log/post2/</guid>
+      <description>&lt;p&gt;trying to get used to colemak. pretty rough&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Post1</title>
       <link>http://localhost:1313/log/post1/</link>

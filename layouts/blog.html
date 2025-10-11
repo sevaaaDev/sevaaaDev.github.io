@@ -1,0 +1,15 @@
+{{ define "main" }} {{$ctx := dict "page" . "Current" "blog"}} {{partial
+"nav.html" $ctx}}
+<p class="prompt">&gt ls -l /blog</p>
+<ul class="list">
+  {{range .Site.RegularPages }} {{if (strings.Contains .Path "/blog/") }}
+  <li>
+    r--
+    <time datetime="{{.Date}}" title='{{time.Format "Tue, 02 Jan 2006" .Date}}'>
+      {{time.Format "02 Jan 2006" .Date}}
+    </time>
+    <a href="{{.Permalink}}">{{.Title}}</a>
+  </li>
+  {{end}} {{end}}
+</ul>
+{{end}}

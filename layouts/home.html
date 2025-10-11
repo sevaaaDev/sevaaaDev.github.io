@@ -2,8 +2,7 @@
 "nav.html" $ctx}}
 <p class="prompt">&gt ls /log | xargs cat</p>
 <ul class="list">
-  {{range .Site.RegularPages }} {{if and (not (eq .Layout "about")) (not
-  (strings.Contains .Path "blog/")) }}
+  {{range .Site.RegularPages }} {{if (strings.Contains .Path "/log/") }}
   <li>
     <time datetime="{{.Date}}" title='{{time.Format "Tue, 02 Jan 2006" .Date}}'>
       {{time.Format "20060102T150405" .Date}}

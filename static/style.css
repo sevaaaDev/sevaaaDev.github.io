@@ -40,7 +40,9 @@ main {
   flex-basis: 60%;
   flex-grow: 1;
 }
-
+a {
+  color: oklch(68.5% 0.169 237.323);
+}
 img {
   border-radius: 8px;
 }
