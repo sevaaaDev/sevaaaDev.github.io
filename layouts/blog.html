@@ -1,6 +1,6 @@
 {{ define "main" }} {{$ctx := dict "page" . "Current" "blog"}} {{partial
 "nav.html" $ctx}}
-<p class="prompt">&gt ls -l /blog</p>
+<p class="prompt">$ ls -l /blog</p>
 <ul class="list">
   {{range .Site.RegularPages }} {{if (strings.Contains .Path "/blog/") }}
   <li>
