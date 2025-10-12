@@ -128,13 +128,15 @@ time {
 .nav ul {
   font-family: "Fira Code";
   display: flex;
+  justify-content: end;
+  &.back-button {
+    /* this is very bad workaround, do we even need it? */
+    justify-content: start;
+  }
   list-style-type: none;
   padding: 0;
   margin-block: 0;
   gap: 0.5rem;
-  & li:first-child {
-    margin-inline-start: auto;
-  }
   & li {
     padding-block: 0.5rem;
   }

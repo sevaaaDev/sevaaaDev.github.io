@@ -1,10 +1,11 @@
 {{define "main"}}
 <nav class="nav">
-  <ul>
+  <ul class="back-button">
     <li>
       <a href='{{urls.JoinPath .Site.BaseURL "/blog"}}' class="current">&lt</a>
     </li>
   </ul>
 </nav>
+<p class="prompt">$ FONT="Rubik" cat --fmt=md -- /blog/{{print .Title}}</p>
 <h1>{{ .Title }}</h1>
 {{ .Content }} {{end}}
