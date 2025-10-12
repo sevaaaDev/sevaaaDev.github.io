@@ -77,12 +77,17 @@ time {
 }
 
 .profile {
-  & ul {
-    list-style-type: "\2726\ ";
+  box-sizing: border-box;
+  & > *:not(.banner) {
     padding-inline: 1rem;
+  }
+  & ul.links {
+    list-style-type: "\2726\ ";
+    padding-inline: 2rem;
   }
   & img {
     display: block;
+    border: 2px solid var(--clr-bg);
     translate: 0 40%;
   }
   & .banner {
@@ -93,13 +98,21 @@ time {
     background-color: var(--clr-banner);
     border-radius: 8px;
     padding-block-start: 2rem;
+    &::before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      background: var(--clr-banner);
+      border-radius: 0 0% 60% 60%;
+      box-shadow: 3px 2px 0px var(--clr-bg);
+    }
     &::after {
       content: "";
       width: 10px;
       height: 10px;
       background: var(--clr-banner);
-      border-radius: 0 0 0 70%;
-      box-shadow: -2px 4px 0px var(--clr-bg);
+      border-radius: 0 0 0 60%;
+      box-shadow: -3px 2px 0px var(--clr-bg);
     }
   }
   & .link-icons {
