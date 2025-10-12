@@ -24,11 +24,18 @@
   src: url("./fonts/rubik-v31-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+:root {
+  --clr-banner: oklch(60% 0.118 184.704);
+  --clr-bg: oklch(21.6% 0.006 56.043);
+  --clr-fg: oklch(86.9% 0.005 56.366);
+  --clr-link: oklch(74.6% 0.16 232.661);
+}
+
 body {
   font-family: "Rubik", Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  background-color: #222;
-  color: #eee;
+  background-color: var(--clr-bg);
+  color: var(--clr-fg);
 }
 
 .container {
@@ -51,7 +58,7 @@ main {
   flex-grow: 2;
 }
 a {
-  color: oklch(71.5% 0.143 215.221);
+  color: var(--clr-link);
 }
 img {
   border-radius: 8px;
@@ -75,16 +82,16 @@ time {
     display: flex;
     flex-direction: row;
     align-items: end;
-    background-color: oklch(60% 0.118 184.704);
+    background-color: var(--clr-banner);
     border-radius: 8px;
     padding-block-start: 2rem;
     &::after {
       content: "";
       width: 10px;
       height: 10px;
-      background: oklch(60% 0.118 184.704);
+      background: var(--clr-banner);
       border-radius: 0 0 0 70%;
-      box-shadow: -2px 4px 0px #222;
+      box-shadow: -2px 4px 0px var(--clr-bg);
     }
   }
   & .link-icons {
@@ -131,7 +138,7 @@ time {
     white-space: nowrap;
     &.current {
       color: black;
-      background-color: oklch(92.8% 0.006 264.531);
+      background-color: var(--clr-fg);
     }
   }
 }
