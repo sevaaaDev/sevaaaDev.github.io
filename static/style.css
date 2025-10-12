@@ -1,10 +1,18 @@
+/* fira-code-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Fira Code";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/fira-code-v27-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 /* fira-code-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Fira Code";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/fira-code-v27-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./fonts/fira-code-v27-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* rubik-regular - latin */
 @font-face {
@@ -145,12 +153,20 @@ time {
 
 .prompt {
   font-family: "Fira Code";
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: scroll;
+  padding-block: 0.5rem;
+  margin-block: 0.5rem;
 }
 
 .list {
   list-style-type: none;
   padding: 0;
   font-family: "Fira Code";
+  & time {
+    font-weight: 600;
+  }
   & p {
     margin-block-start: 0;
   }
