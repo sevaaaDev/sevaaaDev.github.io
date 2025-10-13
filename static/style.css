@@ -186,3 +186,13 @@ time {
     margin-block-start: 0;
   }
 }
+
+pre {
+  padding: 1rem;
+  overflow: scroll;
+  border-radius: 8px;
+}
+
+code {
+  font-family: "Fira Code";
+}
