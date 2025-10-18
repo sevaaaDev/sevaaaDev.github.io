@@ -44,6 +44,13 @@ p.__line-height-mod {
   line-height: 1.7;
 }
 
+.group {
+  margin-block: 1rem;
+  & > * {
+    margin-block: 0;
+  }
+}
+
 body {
   font-family: "Rubik", Arial, Helvetica, sans-serif;
   font-size: 1rem;
@@ -60,6 +67,15 @@ body {
   gap: 0 2rem;
 }
 
+pre {
+  padding: 1rem;
+  overflow: scroll;
+  border-radius: 8px;
+}
+
+code {
+  font-family: "Fira Code";
+}
 header {
   min-width: 300px;
   flex-basis: 0;
@@ -77,7 +93,7 @@ img {
   border-radius: 8px;
 }
 
-time {
+time[title] {
   cursor: help;
 }
 
@@ -196,12 +212,6 @@ time {
   }
 }
 
-pre {
-  padding: 1rem;
-  overflow: scroll;
-  border-radius: 8px;
-}
-
-code {
-  font-family: "Fira Code";
+.title-date {
+  opacity: 0.5;
 }

@@ -8,7 +8,13 @@
 </nav>
 <p class="prompt">$ FONT="Rubik" cat --fmt=md -- /blog/{{print .Title}}</p>
 <div class="__line-height-mod">
-  <h1>{{ .Title }}</h1>
+  <div class="group">
+    <h1>{{ .Title }}</h1>
+    <p class="title-date">
+      Written in
+      <time datetime="{{.Date}}">{{time.Format "Mon, 02 Jan 2006" .Date}}</time>
+    </p>
+  </div>
   {{ .Content }}
 </div>
 {{end}}
