@@ -7,5 +7,8 @@
   </ul>
 </nav>
 <p class="prompt">$ FONT="Rubik" cat --fmt=md -- /blog/{{print .Title}}</p>
-<h1>{{ .Title }}</h1>
-{{ .Content }} {{end}}
+<div class="__line-height-mod">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+</div>
+{{end}}
