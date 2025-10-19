@@ -37,6 +37,7 @@
   --clr-bg: oklch(21.6% 0.006 56.043);
   --clr-fg: oklch(86.9% 0.005 56.366);
   --clr-link: oklch(74.6% 0.16 232.661);
+  --font-default: "Rubik";
 }
 
 .__line-height-mod p,
@@ -53,7 +54,7 @@ p.__line-height-mod {
 }
 
 body {
-  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-family: var(--font-default);
   font-size: 1rem;
   background-color: var(--clr-bg);
   color: var(--clr-fg);
@@ -197,6 +198,10 @@ time[title] {
   margin-block: 0.5rem;
 }
 
+.content {
+  font-family: var(--font-default);
+}
+
 .list {
   list-style-type: none;
   padding: 0 0 1rem 0;
@@ -223,5 +228,13 @@ time[title] {
     display: block;
     position: absolute;
     background-color: var(--clr-bg);
+  }
+}
+
+/* experimental logic */
+
+main:has(.font-select option[value="Fira Code"]:checked) {
+  & .content {
+    --font-default: "Fira Code";
   }
 }

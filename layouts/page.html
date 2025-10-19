@@ -6,8 +6,13 @@
     </li>
   </ul>
 </nav>
-<p class="prompt">$ FONT="Rubik" cat --fmt=md -- /blog/{{print .Title}}</p>
-<div class="__line-height-mod">
+<p class="prompt">
+  $ FONT="<select class="font-select">
+    <option value="Rubik">Rubik</option>
+    <option value="Fira Code">Fira Code</option></select
+  >" cat --fmt=md -- /blog/{{print .Title}}
+</p>
+<div class="__line-height-mod content">
   <div class="group">
     <h1>{{ .Title }}</h1>
     <p class="title-date">

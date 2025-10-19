@@ -1,5 +1,10 @@
 {{ define "main" }} {{$ctx := dict "page" . "Current" "about"}} {{partial
 "nav.html" $ctx}}
-<p class="prompt">$ FONT="Rubik" cat --fmt=md -- /about/about.txt</p>
-<div class="__line-height-mod">{{ .Content }}</div>
+<p class="prompt">
+  $ FONT="<select class="font-select">
+    <option value="Rubik">Rubik</option>
+    <option value="Fira Code">Fira Code</option></select
+  >" cat --fmt=md -- /about/about.txt
+</p>
+<div class="__line-height-mod content">{{ .Content }}</div>
 {{end}}
