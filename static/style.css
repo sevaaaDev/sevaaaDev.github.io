@@ -216,3 +216,12 @@ time[title] {
 .title-date {
   opacity: 0.5;
 }
+
+.list time[title]:hover {
+  &::before {
+    content: attr(title);
+    display: block;
+    position: absolute;
+    background-color: var(--clr-bg);
+  }
+}
