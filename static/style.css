@@ -80,10 +80,6 @@ a {
   color: var(--clr-link);
 }
 
-time {
-  font-family: Fira Code;
-}
-
 nav ul {
   list-style-type: none;
   padding-inline: 0;
@@ -102,7 +98,20 @@ nav a:not(.current) {
 .list a {
   text-decoration: none;
 }
+.list time {
+  font-family: Fira Code;
+}
+ul {
+  font-family: Zen Old Mincho;
+}
 
 p {
   font-family: Zen Old Mincho;
+}
+
+.group {
+  & .title,
+  & p {
+    text-align: center;
+  }
 }

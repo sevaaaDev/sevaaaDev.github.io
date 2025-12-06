@@ -1,15 +1,7 @@
 {{define "main"}}
-<nav class="nav">
-  <ul class="back-button">
-    <li>
-      <a href='{{urls.JoinPath .Site.BaseURL "/blog"}}' class="current">&lt</a>
-    </li>
-  </ul>
-</nav>
-<p class="prompt">$ FONT="Rubik" cat --fmt=md -- /blog/{{print .Title}}</p>
 <div class="__line-height-mod">
   <div class="group">
-    <h1>{{ .Title }}</h1>
+    <h1 class="title">{{ .Title }}</h1>
     <p class="title-date">
       Written in
       <time datetime="{{.Date}}">{{time.Format "Mon, 02 Jan 2006" .Date}}</time>
@@ -17,4 +9,12 @@
   </div>
   {{ .Content }}
 </div>
+{{end}} {{define "nav"}}
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
+</nav>
 {{end}}
