@@ -32,6 +32,14 @@
   src: url("./fonts/rubik-v31-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* zen-old-mincho-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Zen Old Mincho";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/zen-old-mincho-v13-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 :root {
   --clr-banner: #89b482;
   --clr-bg: #282828;
@@ -39,33 +47,23 @@
   --clr-link: #7daea3;
 }
 
-.__line-height-mod p,
-.__line-height-mod li,
-p.__line-height-mod {
-  line-height: 1.7;
-}
-
-.group {
-  margin-block: 1rem;
-  & > * {
-    margin-block: 0;
-  }
-}
-
 body {
   font-family: "Rubik", Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   background-color: var(--clr-bg);
   color: var(--clr-fg);
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 700px;
   margin-inline: auto;
-  padding: 0.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 2rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-block: 1rem;
 }
 
 pre {
@@ -77,132 +75,34 @@ pre {
 code {
   font-family: "Fira Code";
 }
-header {
-  min-width: 300px;
-  flex-basis: 0;
-  flex-grow: 1;
-}
-main {
-  min-width: 300px;
-  flex-basis: 0;
-  flex-grow: 2;
-}
+
 a {
   color: var(--clr-link);
 }
-img {
-  border-radius: 8px;
+
+time {
+  font-family: Fira Code;
 }
 
-time[title] {
-  cursor: help;
-}
-
-.profile {
-  box-sizing: border-box;
-  & ul.links {
-    list-style-type: "\2726\ ";
-    padding-inline: 2rem;
-  }
-  & img {
-    display: block;
-    border: 2px solid var(--clr-bg);
-    translate: 0 40%;
-  }
-  & .banner {
-    /* aspect-ratio: 3 / 1; */
-    display: flex;
-    flex-direction: row;
-    align-items: end;
-    background-color: var(--clr-banner);
-    border-radius: 8px;
-    /* padding-block-start: 2rem; */
-  }
-  & .link-icons {
-    display: flex;
-    padding-block: 1rem;
-    & a:first-child {
-      margin-inline-start: auto;
-    }
-  }
-}
-.profile a {
-  white-space: nowrap;
-}
-
-.name,
-.username {
-  margin-block: 0;
-}
-
-.name .pron {
-  font-size: 1rem;
-  font-weight: 400;
-  opacity: 0.5;
-}
-
-.nav ul {
-  font-family: "Fira Code";
-  display: flex;
-  justify-content: end;
-  &.back-button {
-    /* this is very bad workaround, do we even need it? */
-    justify-content: start;
-  }
+nav ul {
   list-style-type: none;
-  padding: 0;
-  margin-block: 0;
-  gap: 0.5rem;
-  & li {
-    padding-block: 0.5rem;
-  }
-  & li a {
-    padding: 0.3rem 0.7rem;
-    border-radius: 4px;
-    color: var(--clr-fg);
-    text-decoration: none;
-    white-space: nowrap;
-    &.current {
-      color: black;
-      background-color: var(--clr-fg);
-    }
-  }
+  padding-inline: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
-
-.prompt {
-  font-family: "Fira Code";
-  font-weight: 600;
-  white-space: nowrap;
-  overflow: scroll;
-  padding-block: 0.5rem;
-  margin-block: 0.5rem;
+nav a:not(.current) {
+  text-decoration: none;
 }
 
 .list {
   list-style-type: none;
-  padding: 0 0 1rem 0;
-  font-family: "Fira Code";
-  overflow: scroll;
-  & .blog-entry {
-    white-space: nowrap;
-  }
-  & time {
-    font-weight: 600;
-  }
-  & p {
-    margin-block-start: 0;
-  }
+  padding-inline: 0rem;
+}
+.list a {
+  text-decoration: none;
 }
 
-.title-date {
-  opacity: 0.5;
-}
-
-.list time[title]:hover {
-  &::before {
-    content: attr(title);
-    display: block;
-    position: absolute;
-    background-color: var(--clr-bg);
-  }
+p {
+  font-family: Zen Old Mincho;
 }

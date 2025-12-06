@@ -1,14 +1,30 @@
-{{ define "main" }} {{$ctx := dict "page" . "Current" "log"}} {{partial
-"nav.html" $ctx}}
-<p class="prompt">$ ls /log | xargs cat</p>
+{{ define "main" }}
+<h1>Sevaaadev</h1>
+<p>
+  Hi! my name is sevan, im a programmer that enjoy exploring computer. i write
+  blog about things that are related to programming and computer.
+</p>
+<h2>Latest Blog</h2>
 <ul class="list">
-  {{range .Site.RegularPages }} {{if (strings.Contains .Path "/log/") }}
-  <li>
-    <time datetime="{{.Date}}" title='{{time.Format "Mon, 02 Jan 2006" .Date}}'>
-      {{time.Format "20060102T150405" .Date}}
-    </time>
-    {{.Content}}
+  {{range .Site.RegularPages }} {{if (strings.Contains .Path "/blog/") }}
+  <li class="blog-entry">
+    <time datetime="{{.Date}}"> {{time.Format "02 Jan 2006" .Date}} </time>
+    <a href="{{.Permalink}}">{{.Title}}</a>
   </li>
   {{end}} {{end}}
+  <li class="blog-entry">
+    <time datetime=""> 12 Dec 2025 </time>
+    <a href="">Setting up treesitter for neovim without using plugin</a>
+  </li>
+  <li class="blog-entry">
+    <time datetime=""> 07 Dec 2025 </time>
+    <a href="">How to make regular keyboard more ergonomic</a>
+  </li>
 </ul>
-{{end}}
+{{ end }} {{ define "nav" }}
+<ul>
+  <li><a href="/" class="current">Home</a></li>
+  <li><a href="/blog">Blog</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+{{ end }}

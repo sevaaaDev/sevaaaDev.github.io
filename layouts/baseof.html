@@ -5,7 +5,7 @@
   </head>
   <body>
     <div class="container">
-      <header>{{ partial "profile.html" . }}</header>
+      <nav>{{ block "nav" . }} {{ end }}</nav>
       <main>{{ block "main" . }} {{ end }}</main>
     </div>
   </body>
