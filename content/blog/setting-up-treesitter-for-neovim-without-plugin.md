@@ -1,6 +1,6 @@
 +++
 date = '2025-12-06T10:27:30+07:00'
-draft = true
+draft = false
 title = 'Setting Up Treesitter For Neovim Without Plugin'
 +++
 
@@ -35,4 +35,4 @@ vim.treesitter.start()
 
 ## More info
 if you have problem after following this guide, its best to consult the neovim docs `:h treesitter`, `:h runtimepath`, `:h ftplugins`.   
-to build the treesitter parser, you can read the [https://tree-sitter.github.io/tree-sitter/creating-parsers/1-getting-started.html#getting-started](treesitter docs)
+to build the treesitter parser, you can read the [treesitter docs#getting-started](https://tree-sitter.github.io/tree-sitter/creating-parsers/1-getting-started.html#getting-started)
