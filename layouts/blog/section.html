@@ -1,6 +1,11 @@
 {{ define "main" }}
-<div class="__line-height-mod">{{ .Content }}</div>
-{{end}}
+<h1>All Posts</h1>
+<ul>
+  {{ range .RegularPages }}
+    <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+  {{ end }}
+</ul>
+{{ end }}
 {{define "nav"}}
 <nav>
   <ul>

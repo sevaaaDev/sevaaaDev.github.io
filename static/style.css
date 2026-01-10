@@ -49,69 +49,17 @@
 
 body {
   font-family: "Rubik", Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
+/*  font-size: 1.2rem;*/
   background-color: var(--clr-bg);
   color: var(--clr-fg);
 }
 
-.container {
-  max-width: 700px;
-  margin-inline: auto;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin-block: 1rem;
-}
-
-pre {
-  padding: 1rem;
-  overflow: scroll;
-  border-radius: 8px;
-}
-
-code {
-  font-family: "Fira Code";
-}
-
 a {
+  text-decoration: none;
   color: var(--clr-link);
 }
 
-nav ul {
-  list-style-type: none;
-  padding-inline: 0;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-nav a:not(.current) {
-  text-decoration: none;
-}
-
-.list {
-  list-style-type: none;
-  padding-inline: 0rem;
-}
-.list a {
-  text-decoration: none;
-}
-.list time {
-  font-family: Fira Code;
-}
-ul {
-  font-family: Zen Old Mincho;
-}
-
-p {
-  font-family: Zen Old Mincho;
-}
-
-.group {
-  & .title,
-  & p {
-    text-align: center;
-  }
+.container {
+  max-width: 60ch;
+  margin-inline: auto;
 }

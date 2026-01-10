@@ -1,0 +1,7 @@
+<ul class="list">
+  {{range .Site.RegularPages }} {{if (strings.Contains .Path "/blog/") }}
+  <li class="blog-entry">
+    <a href="{{.Permalink}}">{{.Title}}</a>
+  </li>
+  {{end}} {{end}}
+</ul>

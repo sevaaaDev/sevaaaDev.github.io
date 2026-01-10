@@ -1,30 +1,34 @@
+{{ define "nav" }}
+<ul>
+  <li><a href="/" class="current">Home</a></li>
+  <li><a href="/blog">Blog</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+{{ end }}
 {{ define "main" }}
 <h1>Sevaaadev</h1>
 <p>
   Hi! my name is sevan, im a programmer that enjoy exploring computer. i write
   blog about things that are related to programming and computer.
 </p>
-<h2>Latest Blog</h2>
+<h2>Recent Post</h2>
 <ul class="list">
-  {{range .Site.RegularPages }} {{if (strings.Contains .Path "/blog/") }}
+  {{with .Site.RegularPages | first 5}}
+  {{range . }} {{if (strings.Contains .Path "/blog/") }}
   <li class="blog-entry">
-    <time datetime="{{.Date}}"> {{time.Format "02 Jan 2006" .Date}} </time>
-    <a href="{{.Permalink}}">{{.Title}}</a>
+    <a href="{{.RelPermalink}}">{{.Title}}</a>
   </li>
-  {{end}} {{end}}
-  <li class="blog-entry">
-    <time datetime=""> 12 Dec 2025 </time>
-    <a href="">Setting up treesitter for neovim without using plugin</a>
-  </li>
-  <li class="blog-entry">
-    <time datetime=""> 07 Dec 2025 </time>
-    <a href="">How to make regular keyboard more ergonomic</a>
-  </li>
+  {{end}} {{end}} {{end}}
 </ul>
-{{ end }} {{ define "nav" }}
-<ul>
-  <li><a href="/" class="current">Home</a></li>
-  <li><a href="/blog">Blog</a></li>
-  <li><a href="/about">About</a></li>
-</ul>
+<!--<h2>Series</h2>
+<p>these are blog series where its too long to put it in single post</p>
+<h3>Making a terminal text editor in Go</h3>
+<ul class="list">
+  <li class="blog-entry">
+    <a href="">Part 1: Making a terminal text editor in Go</a>
+  </li>
+  <li class="blog-entry">
+    <a href="">Part 2: Making a terminal text editor in Go</a>
+  </li>
+</ul>-->
 {{ end }}
