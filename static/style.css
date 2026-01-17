@@ -48,15 +48,30 @@
 }
 
 body {
-  font-family: "Rubik", Arial, Helvetica, sans-serif;
-/*  font-size: 1.2rem;*/
+/*  font-family: "Rubik", Arial, Helvetica, sans-serif;*/
+  font-size: 1.1rem;
+  font-family: "Zen Old Mincho", serif;
   background-color: var(--clr-bg);
   color: var(--clr-fg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
 }
 
 a {
   text-decoration: none;
   color: var(--clr-link);
+}
+
+code {
+  font-family: "Fira Code", monospace;
+  font-size: 1rem;
 }
 
 .container {
