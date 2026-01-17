@@ -67,6 +67,24 @@ a {
   text-decoration: none;
   color: var(--clr-link);
 }
+a[target="_blank"]::after {
+  content: "\2197";
+}
+
+a[target="_blank"]::after {
+  content: "";
+  display: inline-block;
+  width: 0.80em;
+  height: 0.80em;
+  margin-left: 0.25em;
+  background: no-repeat center / contain;
+  background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'>\
+<path d='M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z'/>\
+<path d='M5 5h6V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-2v6H5V5z'/>\
+</svg>");
+}
+
 
 code {
   font-family: "Fira Code", monospace;
@@ -79,6 +97,13 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+
+.card {
+  h3, p {
+    margin: 0;
+  }
+  margin-block: 1rem;
 }
 
 .container {
