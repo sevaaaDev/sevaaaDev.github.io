@@ -14,7 +14,6 @@ to make Neovim recognise the parser, you need to place it in the `{nvim_runtime_
 the config_home and data_home is typically in `~/.config/` and `~/local/share/` respectively.
 
 you can place it in either directory, the only difference is that the config directory will be sourced first. i suggest to put it in the local/share directory because thats what everyone do.
-
 so for example if you have treesitter markdown parser, the path would be like this `~/.local/share/nvim/site/parser/markdown.so`
 
 now that the parser has been set up, we need to set the queries files to get syntax highlighting to work.
