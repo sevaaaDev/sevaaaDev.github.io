@@ -40,16 +40,26 @@
   font-weight: 400;
   src: url("./fonts/zen-old-mincho-v13-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "XCharter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/XCharter-Roman.otf") format("opentype"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 :root {
   --clr-banner: #89b482;
   --clr-bg: #282828;
   --clr-fg: #ddc7a1;
   --clr-link: #7daea3;
+  --clr-darker-bg: #181818;
 }
 
 body {
   font-size: 1.1rem;
-  font-family: "Zen Old Mincho", serif;
+  font-family: "XCharter", serif;
   background-color: var(--clr-bg);
   color: var(--clr-fg);
 }
@@ -63,12 +73,19 @@ h6 {
   font-family: "Rubik", Arial, Helvetica, sans-serif;
 }
 
+p {
+  line-height: 1.6;
+}
+
+pre {
+  padding: 1rem;
+  border-radius: .5rem;
+  border: 1px solid white;
+}
+
 a {
   text-decoration: none;
   color: var(--clr-link);
-}
-a[target="_blank"]::after {
-  content: "\2197";
 }
 
 a[target="_blank"]::after {
@@ -85,10 +102,16 @@ a[target="_blank"]::after {
 </svg>");
 }
 
+pre code {
+  padding: .0rem;
+}
 
 code {
   font-family: "Fira Code", monospace;
   font-size: 1rem;
+  background-color: var(--clr-darker-bg);
+  padding: .2rem;
+  border-radius: .3rem;
 }
 
 nav ul {
