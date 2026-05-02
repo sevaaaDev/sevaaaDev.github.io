@@ -1,7 +1,7 @@
 +++
 date = '2026-05-02T14:38:24+07:00'
 draft = false
-title = 'Setting Up Audio in Linux'
+title = 'Setting Up Audio on Linux'
 +++
 > this is a basic explanation on linux audio stack. refer to archlinux wiki for more info
 
