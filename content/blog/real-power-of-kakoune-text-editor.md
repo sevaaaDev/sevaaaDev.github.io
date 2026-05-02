@@ -1,7 +1,7 @@
 +++
 date = '2026-02-07T09:22:01+07:00'
 draft = false
-title = 'Kakoune Is More Than Just A Selection-First Editor'
+title = 'Real Power Of Kakoune Text Editor'
 +++
 
 this is a short post talking about the advantages of using kakoune beyond its selection-first editing.
